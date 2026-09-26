@@ -17,7 +17,7 @@ function App() {
         <ProfileCard
           name="Yerbol"
           bio="My name is Yerbol. I am a student interested in technology, programming, and web development."
-          avatarUrl="/dev.jpeg"
+          avatarUrl={`${import.meta.env.BASE_URL}dev.jpeg`}
           links={links}
         />
       </main>
