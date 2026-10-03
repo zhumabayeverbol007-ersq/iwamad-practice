@@ -1,4 +1,5 @@
 import LinkBadge from './LinkBadge';
+import LikeButton from './LikeButton';
 
 type LinkItem = {
   id: number;
@@ -29,6 +30,8 @@ function ProfileCard({ name, bio, avatarUrl, links }: ProfileCardProps) {
       ) : (
         <p>No links added yet.</p>
       )}
+
+      <LikeButton />
     </article>
   );
 }
