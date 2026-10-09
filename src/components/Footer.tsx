@@ -5,7 +5,7 @@ type FooterProps = {
 
 function Footer({ year, author }: FooterProps) {
   return (
-    <footer className="p-6 text-center text-sm text-gray-500">
+    <footer className="p-6 text-center text-sm text-muted">
       <p>© {year} {author}</p>
     </footer>
   );

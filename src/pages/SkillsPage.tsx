@@ -1,3 +1,5 @@
+import SkillBadge from '../components/SkillBadge';
+
 type Skill = {
   id: number;
   label: string;
@@ -29,8 +31,8 @@ function SkillsPage() {
       {skills.length > 0 ? (
         <ul className="flex gap-4 flex-wrap">
           {skills.map((skill) => (
-            <li key={skill.id} className="px-4 py-2 bg-gray-100 rounded">
-              {skill.label}
+            <li key={skill.id}>
+              <SkillBadge skill={skill} />
             </li>
           ))}
         </ul>
