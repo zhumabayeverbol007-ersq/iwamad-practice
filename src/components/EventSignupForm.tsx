@@ -51,8 +51,8 @@ function EventSignupForm({ event }: EventSignupFormProps) {
   }
 
   return (
-    <div>
-      <p>Seats left: {seatsLeft}</p>
+    <div className="w-full max-w-md mx-auto">
+      <p className="mb-4">Seats left: {seatsLeft}</p>
 
       <form onSubmit={handleSubmit} noValidate>
         <TextField
@@ -87,10 +87,16 @@ function EventSignupForm({ event }: EventSignupFormProps) {
           error={showError('tickets')}
         />
 
-        <Button type="submit" variant="primary">Book</Button>
+        <Button type="submit" variant="primary">
+          Book
+        </Button>
       </form>
 
-      {status && <p role="status">{status}</p>}
+      {status && (
+        <p role="status" className="mt-4 text-green-700">
+          {status}
+        </p>
+      )}
     </div>
   );
 }
